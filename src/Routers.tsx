@@ -1,8 +1,8 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Layout, { LayoutNone } from "./components/layout/Layout";
-import Home from "./views/Home";
 import About from "./views/About";
 import Signup from "./views/Signup";
+import Home from "./views/Home";
 
 const Routers: React.FC = () => (
   <BrowserRouter>
