@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Departure: React.FC = () => {
+const PassengerSelector: React.FC = () => {
   const [selectedDeparture, setSelectedDeparture] = useState<string | null>(
     null
   );
@@ -11,47 +11,29 @@ const Departure: React.FC = () => {
   const [isOpenDestination, setIsOpenDestination] = useState(false);
 
   const departureOptions = [
-    "수서",
-    "동탄",
-    "평택지제",
-    "곡성",
-    "공주",
-    "광주송정",
-    "구례구",
-    "김천구미",
-    "나주",
-    "남원",
-    "대전",
-    "동대구",
-    "마산",
-    "목포",
-    "밀양",
-    "부산",
-    "서대구",
-    "순천",
-    "경주",
-  ]; // 출발역 목록
+    "어른(만 13세 이상) 0명",
+    "어른(만 13세 이상) 1명",
+    "어른(만 13세 이상) 2명",
+    "어른(만 13세 이상) 3명",
+    "어른(만 13세 이상) 4명",
+    "어른(만 13세 이상) 5명",
+    "어른(만 13세 이상) 6명",
+    "어른(만 13세 이상) 7명",
+    "어른(만 13세 이상) 8명",
+    "어른(만 13세 이상) 9명",
+  ];
   const destinationOptions = [
-    "수서",
-    "동탄",
-    "평택지제",
-    "곡성",
-    "공주",
-    "광주송정",
-    "구례구",
-    "김천구미",
-    "나주",
-    "남원",
-    "대전",
-    "동대구",
-    "마산",
-    "목포",
-    "밀양",
-    "부산",
-    "서대구",
-    "순천",
-    "경주",
-  ]; // 도착역 목록
+    "어린이(만 13세 이하) 0명",
+    "어린이(만 13세 이하) 1명",
+    "어린이(만 13세 이하) 2명",
+    "어린이(만 13세 이하) 3명",
+    "어린이(만 13세 이하) 4명",
+    "어린이(만 13세 이하) 5명",
+    "어린이(만 13세 이하) 6명",
+    "어린이(만 13세 이하) 7명",
+    "어린이(만 13세 이하) 8명",
+    "어린이(만 13세 이하) 9명",
+  ];
 
   const handleSelectDeparture = (item: string) => {
     setSelectedDeparture(item);
@@ -64,7 +46,7 @@ const Departure: React.FC = () => {
   };
 
   return (
-    <div className="max-w-2xl w-full text-white flex justify-center items-center p-8 ">
+    <div className="max-w-2xl w-full text-white flex justify-center items-center p-8 pt-0 ">
       <div className="flex gap-5">
         <div>
           <label
@@ -83,7 +65,7 @@ const Departure: React.FC = () => {
             >
               <span className="flex items-center">
                 <span className="ml-3 block truncate">
-                  {selectedDeparture || "출발역"}
+                  {selectedDeparture || "어른(만 13세 이상) 인원수 선택"}
                 </span>
               </span>
             </button>
@@ -130,7 +112,7 @@ const Departure: React.FC = () => {
             >
               <span className="flex items-center">
                 <span className="ml-3 block truncate">
-                  {selectedDestination || "도착역"}
+                  {selectedDestination || "어린이(만 13세 이하) 인원수 선택"}
                 </span>
               </span>
             </button>
@@ -165,4 +147,4 @@ const Departure: React.FC = () => {
   );
 };
 
-export default Departure;
+export default PassengerSelector;
